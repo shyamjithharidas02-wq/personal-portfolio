@@ -1,0 +1,50 @@
+:root {
+  /* Colors */
+  --color-accent: #7c3aed;
+  --color-accent-light: #a78bfa;
+  --color-accent-blue: #3b82f6;
+  --color-green: #16a34a;
+  --color-green-bg: rgba(22, 163, 74, 0.1);
+
+  /* Light theme */
+  --bg-primary: #f0f0f8;
+  --bg-secondary: #ffffff;
+  --bg-tertiary: #e8e8f0;
+  --text-primary: #1a1a2e;
+  --text-secondary: #4a5568;
+  --text-muted: #9ca3af;
+  --border-color: #e2e8f0;
+  --nav-bg: rgba(240, 240, 248, 0.95);
+  --card-bg: #ffffff;
+  --card-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
+
+  /* Typography */
+  --font-display: 'Sora', sans-serif;
+  --font-body: 'DM Sans', sans-serif;
+  --font-mono: 'Space Mono', monospace;
+
+  /* Spacing */
+  --nav-height: 70px;
+  --section-padding-x: 0;
+  --section-padding-y: 80px;
+  --max-width: 1300px;
+
+  /* Transitions */
+  --transition-base: 0.25s ease;
+  --transition-slow: 0.4s ease;
+}
+
+[data-theme='dark'] {
+  --bg-primary: #0f0f1a;
+  --bg-secondary: #1a1a2e;
+  --bg-tertiary: #13131f;
+  --text-primary: #e2e8f0;
+  --text-secondary: #94a3b8;
+  --text-muted: #4a5568;
+  --border-color: #1e1e3a;
+  --nav-bg: rgba(15, 15, 26, 0.95);
+  --card-bg: #1a1a2e;
+  --card-shadow: 0 4px 24px rgba(0, 0, 0, 0.4);
+}
+
+

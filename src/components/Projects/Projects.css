@@ -1,0 +1,100 @@
+.projects {
+  padding: var(--section-padding-y) var(--section-padding-x);
+  background: var(--bg-secondary);
+  transition: background var(--transition-slow);
+}
+
+.projects__inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+.projects__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+  margin-top: 48px;
+}
+
+.projects__card {
+  background: var(--bg-primary);
+  border: 1px solid var(--border-color);
+  border-radius: 14px;
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  transition: border-color var(--transition-base), transform var(--transition-base), box-shadow var(--transition-base);
+  position: relative;
+  overflow: hidden;
+}
+
+.projects__card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--color-accent), var(--color-accent-blue));
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform var(--transition-slow);
+}
+
+.projects__card:hover {
+  border-color: var(--color-accent);
+  transform: translateY(-5px);
+  box-shadow: 0 12px 36px rgba(124, 58, 237, 0.15);
+}
+
+.projects__card:hover::before {
+  transform: scaleX(1);
+}
+
+.projects__card-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.projects__card-title {
+  font-family: var(--font-display);
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.projects__link-icon {
+  color: var(--text-muted);
+  flex-shrink: 0;
+  margin-top: 2px;
+  transition: color var(--transition-base), transform var(--transition-base);
+}
+
+.projects__card:hover .projects__link-icon {
+  color: var(--color-accent);
+  transform: translate(2px, -2px);
+}
+
+.projects__card-desc {
+  font-size: 14.5px;
+  line-height: 1.75;
+  color: var(--text-secondary);
+  flex: 1;
+}
+
+.projects__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.projects__tag {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--color-accent);
+  background: rgba(124, 58, 237, 0.08);
+  border: 1px solid rgba(124, 58, 237, 0.18);
+  border-radius: 6px;
+  padding: 4px 10px;
+}
